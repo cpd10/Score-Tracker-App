@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.project_2.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/record1"
+                style="@style/recordTheme" />
+
+            <ImageView
+                android:src="@drawable/lakers_logo"
+                style="@style/teamLogo" />
+
+            <TextView
+                android:id="@+id/team1"
+                android:text="@string/team1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/score1"
+                style="@style/scoreText" />
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="2 Points"
+                android:onClick="addTwoTeamOne"/>
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="3 Points"
+                android:onClick="addThreeTeamOne"/>
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="1 Point"
+                android:onClick="addOneTeamOne"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_weight="0"
+            android:layout_marginTop="60dp"
+            android:text="VS"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/record2"
+                style="@style/recordTheme" />
+
+            <ImageView
+                android:src="@drawable/clippers_logo"
+                style="@style/teamLogo" />
+
+            <TextView
+                android:id="@+id/team2"
+                android:text="@string/team2"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/score2"
+                style="@style/scoreText" />
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="2 Points"
+                android:onClick="addTwoTeamTwo"/>
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="3 Points"
+                android:onClick="addThreeTeamTwo"/>
+
+            <Button
+                style="@style/ButtonTheme"
+                android:text="1 Point"
+                android:onClick="addOneTeamTwo"/>
+
+         </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="reset"
+        android:id="@+id/resetButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        style="@style/ButtonTheme"
+        android:onClick="resetScore"/>
+
+</RelativeLayout>
